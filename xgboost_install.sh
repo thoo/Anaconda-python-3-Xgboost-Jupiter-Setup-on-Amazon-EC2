@@ -9,14 +9,8 @@ sudo apt-get -y install make
 
 sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev libssl-dev  # dependencies
 
-# install gcc-6
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get install gcc-6 g++-6
 
 
-# set c++ compiler to gcc-6 for multithreading support
-sed -ie "s/# export CC = gcc/export CC = gcc-6/g" xgboost/make/config.mk
-sed -ie "s/# export CXX = g++/export CXX = g++-6/g" xgboost/make/config.mk
 
 sudo apt-get -y install python-setuptools
 git clone --recursive https://github.com/dmlc/xgboost
